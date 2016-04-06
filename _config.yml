@@ -24,8 +24,8 @@ production_sitename : shen445122.github.io
 filter: 'category'
 
 # Social account
-twitter: masonsuyan
-#weibo:    ID
+# twitter: NAME
+# weibo:    ID
 github: shen445122
 # codepen:  username
 # dribbble: username
@@ -33,10 +33,11 @@ github: shen445122
 # avatar头像及Favicon
 #avatar: http://7u2ho6.com1.z0.glb.clouddn.com/site-avatar.png
 #favicon: http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico
+favicon: favicon.ico
 
 # disqus 设置
-disqus:
-  shortname: suyan-zh
+#disqus:
+#  shortname: 
 
 # google analytics 设置
 ga:
@@ -48,21 +49,20 @@ JB :
   version : 0.3.0
   BASE_PATH : false
   ASSET_PATH : /assets/themes
-  archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
-  atom_path : /atom.xml
-  rss_path : /rss.xml
+  archive_path: pages/archive.html
+  categories_path : pages/categories.html
+  tags_path : pages/tags.html
+  rss_path : pages/rss.xml
 
-  comments :
-    provider : duoshuo
-    duoshuo :
-      short_name : shen445122
+  #comments :
+  #  provider : duoshuo
+  #  duoshuo :
+  #    short_name : shen445122
 
-  analytics :
-    provider : google
-    google :
-        tracking_id : 'UA-76066813-1'
+  #analytics :
+  #  provider : google
+  #  google :
+  #      tracking_id : 'UA-76066813-1'
 
-  sharing :
-    provider : duoshuo
+  #sharing :
+  #  provider : duoshuo
