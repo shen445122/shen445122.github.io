@@ -1,50 +1,44 @@
-# Site settings
 title: 雨沐苍树
-email: shenzr668@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  雨沐苍树1
-
-# Build settings
+description: My personal blog
 permalink: /:year/:month/:day/:title.html
-markdown: kramdown
+# paginate: 10
+markdown: redcarpet
 highlighter: rouge
-sass:
-  style: compressed
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 
-# url
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://shen445122.github.io" # the base hostname & protocol for your site
+# 作者信息
+author: 
+  github: http://github.com/shen445122
+  email: shenzr668@gmail.com
+  #link:
+  #weibo:
+  #music:
+  #linkedin:
+
+# 站点信息
+baseurl: "" 
+url: "http://shen445122.github.io" 
 rss_url: /pages/feed.xml
 production_url : http://shen445122.github.io
 production_sitename : shen445122.github.io
 
-# Sidebar filter
-# Choose 'tag' or 'category' as filter in sidebar.
-filter: 'category'
-
-# Social account
-# twitter: NAME
-# weibo:    ID
-github: shen445122
-# codepen:  username
-# dribbble: username
 
 # avatar头像及Favicon
-#avatar: http://7u2ho6.com1.z0.glb.clouddn.com/site-avatar.png
-#favicon: http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico
-favicon: favicon.ico
+gavatar: /public/img/tree.png
+favicon: /public/img/favicon.ico
+
 
 # disqus 设置
-#disqus:
-#  shortname: 
+disqus:
+  shortname: shen445122
+
 
 # google analytics 设置
 ga:
   id: UA-76066813-1
   url: shen445122.github.io
 
-# All Jekyll-Bootstrap specific configurations are namespaced into this hash
+
+# Jekyll-Bootstrap 相关页面
 JB :
   version : 0.3.0
   BASE_PATH : false
@@ -54,15 +48,23 @@ JB :
   tags_path : pages/tags.html
   rss_path : pages/rss.xml
 
-  #comments :
-  #  provider : duoshuo
-  #  duoshuo :
-  #    short_name : shen445122
 
-  #analytics :
-  #  provider : google
-  #  google :
-  #      tracking_id : 'UA-76066813-1'
+# 主题设置，自动激活某个标签
+active: 读书
 
-  #sharing :
-  #  provider : duoshuo
+
+# 首页除了最新文章外显示分类
+cates: 
+  - Optimization
+  - LaTeX
+
+# 中文本地化
+locals:
+  tags: 标签
+  about: 关于
+  newest: 最新文章
+  archive: 归档
+
+# 其他备用配置
+sass:
+  style: compressed
