@@ -6,5 +6,3 @@
 > github
 
 > jekyll
-
-> jekyllbootstrap
