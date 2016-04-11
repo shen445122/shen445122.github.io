@@ -2,7 +2,7 @@ title: 雨沐苍树
 description: My personal blog
 permalink: /:year/:month/:day/:title.html
 # paginate: 10
-markdown: redcarpet
+markdown: kramdown
 highlighter: rouge
 
 # 作者信息
