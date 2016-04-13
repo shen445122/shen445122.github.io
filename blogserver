@@ -5,10 +5,13 @@
 ## Created Time: Tue 05 Apr 2016 09:56:05 PM CST
 
 #!/bin/sh
+CODE_DIR=/home/smart/htdocs/shen445122.github.io
 
-rm -rf _site/*
-jekyll serve -H 0.0.0.0
-
+if [ -d ${CODE_DIR} ];then
+  cd ${CODE_DIR}
+  rm -rf _site/*
+  jekyll serve -H 0.0.0.0
+fi
 
 #检查错误
 #jekyll build --trace
