@@ -6,12 +6,21 @@
 
 #!/bin/sh
 CODE_DIR=/home/smart/htdocs/shen445122.github.io
+USER=`whoami`
 
 if [ -d ${CODE_DIR} ];then
   cd ${CODE_DIR}
   rm -rf _site/*
   jekyll serve -H 0.0.0.0
 fi
+
+
+if [ "${USER}" == "shenzr" ];then
+  #cd ${CODE_DIR}
+  rm -rf _site/*
+  jekyll serve -H 0.0.0.0
+fi
+
 
 #检查错误
 #jekyll build --trace

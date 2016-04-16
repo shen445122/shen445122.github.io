@@ -3,8 +3,11 @@ layout: post
 title: <i class="fa fa-film fa-lg"></i>
 header: Posts By Category
 group: navigation
+titlename: 分类
 ---
 {% include JB/setup %}
+
+
 
 <ul class="tag_box inline">
   {% assign categories_list = site.categories %}
@@ -12,11 +15,10 @@ group: navigation
 </ul>
 
 
-{% for category in site.categories %} 
+{% for category in site.categories %}
   <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
   <ul>
-    {% assign pages_list = category[1] %}  
+    {% assign pages_list = category[1] %}
     {% include JB/pages_list %}
   </ul>
 {% endfor %}
-
