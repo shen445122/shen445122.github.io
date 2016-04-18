@@ -44,12 +44,13 @@ layout: base
                           {% endif %}
                         </td></tr>
                       <tr><td>评论</td><td>{{ book.description }}</td></tr>
+                      <tr><td>读后感</td><td>{{ book.review }}</td></tr>
                     </tbody>
                   </table>
                 </div>
-              </div>  
+              </div>
             </div>
-          </div>      
+          </div>
         </div>
       {% endfor %}
     </div>
@@ -57,4 +58,3 @@ layout: base
     {% include disqus.html %}
   </div>
 </div>
-

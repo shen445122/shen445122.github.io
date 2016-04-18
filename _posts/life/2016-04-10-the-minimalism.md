@@ -4,6 +4,7 @@ title: 不同领域的极简主义
 category: 生活
 tags: Minimalism
 keywords: 极简 生活
+version: 0.5
 description: 生活当中奉行的一种行为主义，也是一种人生态度
 ---
 >少就是多 －罗伯特勃朗宁   
