@@ -9,4 +9,4 @@ description: 毕设答辩完了，大概大学四年也等于交代了吧
 
 ![1][image-1]
 
-[image-1]:	/public/img/sz.jpg
+[image-1]:	/public/img/constellation/sz.jpg
