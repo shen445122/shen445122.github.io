@@ -2,7 +2,7 @@
 layout: post
 title: 美国的母语教学
 category: 学习
-tags: Experience
+tags: 经验谈
 keywords: 英语,母语
 version: 0.1
 description: 纪录如何一步步学好英语的经验

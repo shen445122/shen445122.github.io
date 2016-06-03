@@ -2,7 +2,7 @@
 layout: post
 title: 如何正确有效地学习一门外语
 category: 学习
-tags: Experience
+tags: 经验谈
 keywords: 外语,经验
 version: 0.1
 description: 纪录如何一步步学好英语的经验

@@ -2,7 +2,7 @@
 layout: post
 title: 你TM问的太多了
 category: 生活
-tags: Mind
+tags: 随笔
 keywords: 感悟 生活
 version: 0.1
 description: 生活中总有些人问的多，做的少，却还抱怨人生，当以此为戒
