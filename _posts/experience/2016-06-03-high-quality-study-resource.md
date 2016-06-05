@@ -2,7 +2,7 @@
 layout: post
 title: 高质量的学习资源
 category: 学习
-tags: 经验谈
+tags: 方法论系列
 keywords: 资源,母语
 version: 0.1
 description: 收集的一些高质量资源
@@ -17,7 +17,7 @@ description: 收集的一些高质量资源
 
 #### 1.1 国外资源：
 
-[TED](http://www.uc.cn)：尖峰创想，启迪心智
+[TED](http://www.uc.cn)：尖峰创想，启迪心智，学科哪些牛人在TED上做过演讲？哪些跨学科的演讲对自己有启发？
 
 [斯坦福开放大学](http://itunes.stanford.edu/)：免费读大学，最新的类似于IOS开发与Ruby开发系列课程，你可以免费找到
 
@@ -91,7 +91,7 @@ description: 收集的一些高质量资源
 
 ### 1、国外开发获取期刊网站与机构：
 
-[DOAJ网站](http://www.doaj.org/)：收集了所有学科，支持OA的期刊。部分期刊还可免费发布论文。
+[DOAJ网站](http://www.doaj.org/)：收集了所有学科，支持OA的期刊。部分期刊还可免费发布论文，可以收集学科的开放获取期刊，看到哪些是高引用与发展潜力的。
 
 [PLoS](http://plos.org/)：已多次推荐。与心理学相关的主要是物理学尤其是复杂网络、计算机科学中的有关研究。
 
@@ -121,7 +121,7 @@ description: 收集的一些高质量资源
 
 [INSPIRE](http://inspirebeta.net/)
 
-[arXiv](http://arxiv.org/)：开放获取期刊的先行者，论文侧重物理、数学与计算机领域。
+[arXiv](http://arxiv.org/)：开放获取期刊的先行者，论文侧重物理、数学与计算机领域,可以查找所在学科，哪些属于高引用刊物或者牛人云集的刊物，高质量的论文文献库。
 
 [IACR](http://eprint.iacr.org/):(Cryptology)
 
@@ -135,13 +135,13 @@ description: 收集的一些高质量资源
 
 ### 4、学术会议、讲义、基金等共享网站
 
-[videolectures](http://videolectures.net/)：众多高质量，包括诺奖得主参与的学术会议视频、ppt合集。
+[videolectures](http://videolectures.net/)：众多高质量，包括诺奖得主参与的学术会议视频、ppt合集，用于查看所在学科的精彩演讲，尤其是诺奖级别的？。
 
 [iamresearcher](http://www.iamresearcher.com/)：你可以将它理解为一个基于学术文献、学术会议的SNS。
 
 [researchgate](http://www.researchgate.net/)：科学家社交网站。
 
-[conferencealerts](http://www.conferencealerts.com/psychology.htm)：学术会议订阅。
+[conferencealerts](http://www.conferencealerts.com/psychology.htm)：学术会议订阅，可以查看哪些学术会议属于世界级别，值得订阅。
 
 [slideside](http://www.yangzhiping.com/psy/slideshare.net/)：老牌，还要介绍吗？我的多数可以公开的ppt都放在这里。
 
@@ -161,7 +161,7 @@ description: 收集的一些高质量资源
 
 [Zotero](http://www.zotero.org/)：以浏览器为基础的文献管理工具，目前已经支持chrome、firefox等多个浏览器。当你在各大文献数据库，读到好文献的时候，轻轻一按浏览器按钮，它就自动分析格式并保存在线数据库中。
 
-以上三个网站，都是有相应配套文献管理软件的，并且天然以互联网为基础，支持Web2.0性质的文献共享、文献自动发现。
+以上三个网站，都是有相应配套文献管理软件的，并且天然以互联网为基础，支持Web2.0性质的文献共享、文献自动发现。文献管理工具，主要用于参考文献下载、参考文献阅读笔记、最终论文写作的所有历程记录，最终共享给课题组或者整个互联网
 
 软件：
 
@@ -180,11 +180,13 @@ description: 收集的一些高质量资源
 > `朝问道，道在哪里？道在定义、验证与质疑的科学三部曲之中。`
 
 狄拉克方法论的四个重要观点：  
-	- 1. 工具主义和可观察原则；  
+	- 1.工具主义和可观察原则；  
 	- 2.自然界的统一；  
 	- 3.充实性原理；  
 	- 4.数学美原理。尤其是数学美。  
-如何拜对庙？一流期刊科学家的文献引用率、民众普遍关心的问题、高创意与广泛使用的开源项目。总有一个是自己感兴趣的。
+如何拜对庙？查看所在学科的权威奖项，尤其是奖励科学生涯早期的年轻科学家奖项，他们的论文是否被高引用。一流期刊科学家的文献引用率、民众普遍关心的问题、高创意与广泛使用的开源项目。总有一个是自己感兴趣的。
+
+阅读与评价高质量文献就像投资，未来二十年，这些年轻科学家里面，谁最有潜力？他们的论文、工作反映出来的学科本质创新规律是什么？我如何以5年前、5年后，对他们的工作的二次评估来调整自己的兴趣方向或者改善自己对学科创新本质规律的认识？
 
 评价文献质量的方法
 
@@ -194,7 +196,7 @@ ESI（Essential Science Indicators）
 
 JCR（Journal Citation Report）
 
-[H指数(h-factor)](http://zh.wikipedia.org/zh/H%E6%8C%87%E6%95%B0)：这里是世界上最牛的[计算机科学家列表](http://web.cs.ucla.edu/~palsberg/h-number.html)。
+[H指数(h-factor)](http://zh.wikipedia.org/zh/H%E6%8C%87%E6%95%B0)：这里是世界上最牛的[计算机科学家列表](http://web.cs.ucla.edu/~palsberg/h-number.html)。他们的高引用论文前三名都是关于什么？反映了学科什么样的本质规律？
 
 [Google Scholar](http://scholar.google.com/)的引率
 
@@ -215,7 +217,7 @@ sciencewatch的[Hot Papers](http://sciencewatch.com/dr/nhp/),提供了22个领�
 
 [Fast Breaking Papers](http://sciencewatch.com/dr/fbp/),则提供了22个领域的被引用次数前1%的论文。
 
-以上资讯均可免费获取，进一步，如果订阅了有关商业数据库，可以获得更详细地，关于本研究领域的平均引用率、top科学家等。同样可以更轻松的方式获取有关资讯。
+以上资讯均可免费获取，进一步反映学科近些年的热门或者突破进展论文，哪些是靠谱的，哪些是值得自己学习的？如果订阅了有关商业数据库，可以获得更详细地，关于本研究领域的平均引用率、top科学家等。同样可以更轻松的方式获取有关资讯。
 
 同样，在你所感兴趣的学术领域，可以参考前文，也存在大量类似高质量的信息源，将让你节省时间，直接追问一手卓越智慧。
 
@@ -229,7 +231,9 @@ sciencewatch的[Hot Papers](http://sciencewatch.com/dr/nhp/),提供了22个领�
 
 [openscienceframework](http://psychfiledrawer.org/)：一个近期发布，帮助人们更好利用实验室数据的计划。
 
-针对自己所在的领域，可以相应地收集一些可靠的第三方数据来源。
+[公民科学计划](https://www.zooniverse.org/)，我如何在自己所在学科发起？
+
+针对自己所在的领域，可以相应地收集一些可靠的第三方数据来源。在线实验、数据采集，我所在学科已经出版了哪些好书，有何伦理、技术注意事项？以及最佳实践或者开源工具？
 
 ## 五、除了掌握技能以外，还能做什么？
 
@@ -247,6 +251,8 @@ sciencewatch的[Hot Papers](http://sciencewatch.com/dr/nhp/),提供了22个领�
 
 ### 2、写作的格式
 
+如何摆脱word的束缚，开始尝试性到真正习惯使用LaTex或者Markdown等格式？这些格式如何与文献管理软件搭配？
+
 [Pandoc](http://johnmacfarlane.net/pandoc/)：转换各类格式利器，支持Markdown与LaTex的互转，更支持十来种格式的互转。
 
 [knitr](http://yihui.name/knitr/)：yihui大作。
@@ -255,7 +261,7 @@ Mou：貌似只有Mac下有
 
 ### 3、写作的工具
 
-[Github](http://github.com/)，你唯一需要的。
+[Github](http://github.com/)，你唯一需要的，远远不止是一个工具，里面卧虎藏龙，隐藏着各个领域的高手。
 
 ### 4、一点感悟
 
