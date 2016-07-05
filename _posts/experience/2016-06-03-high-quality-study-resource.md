@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 高质量的学习资源
+title:  学习资源:高质量的学习资源汇总
 category: 学习
 tags: 方法论系列
-keywords: 资源,母语
+keywords: 资源,心态
 version: 0.1
-description: 收集的一些高质量资源
+description: 用于高质量的学习的一系列资源总结
 ---
 
 ## 一、资源汇总
