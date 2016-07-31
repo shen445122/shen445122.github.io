@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  学习资源:高质量的学习资源汇总
+title: 综合学习资源篇:高质量的学习资源汇总
 category: 学习
 tags: 方法论系列
 keywords: 资源,心态
 version: 0.1
 description: 用于高质量的学习的一系列资源总结
 ---
-
+
 ## 一、资源汇总
 
 ### 1、网络公开课

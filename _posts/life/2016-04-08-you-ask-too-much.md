@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 你TM问的太多了
+title: 生活随笔:你特么问的太多了
 category: 生活
 tags: 随笔
 keywords: 感悟 生活

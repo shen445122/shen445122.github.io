@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 不同领域的极简主义
+title: 生活随笔:不同领域的极简主义
 category: 生活
 tags: 随笔
 keywords: 极简 生活

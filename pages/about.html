@@ -9,6 +9,9 @@ titlename: 关于
     <option value="1"> 英文 English </option>
 </select>
 
+<!-- Chinese Version -->
+<div class="zh post-container">
+
 <h3>关于博客</h3>
 <p style=font-size:18px><B>shen445122.github.io</B>是用github、jekyll、markdown搭建起来的博客。对于写博客这件事的看法，用一千个读者心中有一千个哈姆雷特来形容一点都不为过
 而我写博客的主要原因是是为了更好的记录自己生活中的一些思考，体验和感悟。对我来说，博客不是一个碎碎念的载体，应该更像一个有生命的事物，他帮助我完整地思考，汇总自己的想法，而对于这个想法，
@@ -26,6 +29,30 @@ titlename: 关于
 <p style=font-size:18px>据说，许多世界政要和名人看到这块碑文时都感慨不已。有人说这是一篇人生的教义，有人说这是灵魂的一种自省。</p>
 <p style=font-size:18px>当年轻的曼德拉看到这篇碑文时，顿然有醍醐灌顶之感，声称自己从中找到了改变南非甚至整个世界的金钥匙。回到南非后，这个志向远大、原本赞同以暴治暴填平种族歧视鸿沟的黑人青年，一下子改变的自己的思想和处世风格，他从改变自己、改变自己的家庭和亲朋好友着手，经历了几十年，终于改变了他的国家。</p>
 <p style=font-size:18px>人在做天在看，冥冥中自有因果在安排，永远怀着一颗善良的心，持续做对的事。时刻提醒自己，改变自己，低调做人。</p>
+
+<h3>杂思碎想</h3>
+<p style=font-size:18px>2016-07-24、万事入门三步走</p>
+<p style=font-size:18px>学习任何知识入门都需要三步：
+第一步提纲挈领，读的书不能太厚，讲述20%的重点知识；
+第二步理论细节，读的书一定要厚，讲述80%的细节知识；
+第三步应用实践，理论就是用来指导实践的，学了之后必须能动手解决问题才算真正掌握了。</p>
+
+<p style=font-size:18px>2016-07-24</p>
+<p style=font-size:18px>期望每天早上起床的时候，自己的知识可以放空，成为一张白纸，晚上入睡的时候，这张纸上面可以写上满满的收获，
+这样子，把每一天的成长写成一本书的每一个篇章，一年后，回过头看看自己写的这一本书，回过头细细品味自己每一天的成长。</p>
+
+<p style=font-size:18px>2016-07-31</p>
+<p style=font-size:18px>走得越高，看得越远，获取到得东西也就越多，这个是很多人知道的事情，但是有一个细节却常常被掩盖起来，那就是要看的越高，你脚下踩的东西要越多，要站得越稳，你脚下踩的东西要越结实，有的人踩的是书籍，有的人踩的是上一辈的肩膀，有的人踩的是自己的尊严，有的人踩的是金钱，有的人踩的是别人躯体。</p>
+
+</div>
+
+
+<!-- English Version -->
+<div class="en post-container">
+
+
+</div>
+
 
 <center><img src="/public/img/constellation/tp.jpg" style="width:100%"></center>
 
@@ -49,3 +76,42 @@ titlename: 关于
   <i class="fa fa-music fa-lg" style="color:#16a095;"></i>
 </a>
 <hr>
+
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+
+    // bind hashchange event
+    window.addEventListener('hashchange', _render);
+
+    // handle render
+    function _render(){
+        var _hash = window.location.hash;
+        // en
+        if(_hash == "#en"){
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        // zh by default
+        }else{
+            // not trigger onChange, otherwise cause a loop call.
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }
+    }
+    // handle select change
+    function onLanChange(index){
+        if(index == 0){
+            window.location.hash = "#zh"
+        }else{
+            window.location.hash = "#en"
+        }
+    }
+    // init
+    _render();
+</script>
