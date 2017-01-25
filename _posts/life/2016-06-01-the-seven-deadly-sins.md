@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 生活随笔:七宗罪
+title: 生活随笔:七宗罪
 category: 生活
 tags: 世界观
 keywords: 生活
