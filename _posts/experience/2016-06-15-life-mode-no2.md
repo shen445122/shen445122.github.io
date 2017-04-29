@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 生活模式2:实践者
-category: 生活
+category: 模式
 tags: 随笔
 keywords: 幸福 生活
 version: 0.5

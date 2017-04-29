@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 生活模式1:安静者
-category: 生活
+category: 模式
 tags: 方法论系列
 keywords: 资源,方法论
 version: 0.1

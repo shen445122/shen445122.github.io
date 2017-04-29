@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 综合学习资源篇:高质量的学习资源汇总
+title: 资源:高质量的学习资源汇总[转载]
 category: 学习
 tags: 方法论系列
 keywords: 资源,心态

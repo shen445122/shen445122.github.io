@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 生活随笔:你特么问的太多了
+title: 随笔:你特么问的太多了
 category: 生活
 tags: 随笔
 keywords: 感悟 生活
-version: 0.1
+version: 1.0
 description: 生活中总有些人问的多，做的少，却还抱怨人生，当以此为戒
 ---
 

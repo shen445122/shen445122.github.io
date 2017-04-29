@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 生活随笔:七宗罪
+title: 随笔:五宗罪
 category: 生活
-tags: 世界观
+tags: 随笔
 keywords: 生活
 version: 0.5
 description: 生活当中奉行的一种行为主义，也是一种人生态度

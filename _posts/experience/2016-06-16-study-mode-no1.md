@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  学习模式1:自己的学习
-category: 学习
+title:  学习模式1:正确地学习
+category: 模式
 tags: 方法论系列
 keywords: 学习,方法论
 version: 0.1

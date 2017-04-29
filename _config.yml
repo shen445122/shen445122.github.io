@@ -65,7 +65,7 @@ locals:
   newest: 最新文章
   archive: 归档
   categories: 分类
-  value: 价值
+  #value: 价值
 
 #用于显示最新文章
 gems: [jekyll-paginate]

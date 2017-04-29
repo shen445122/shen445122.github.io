@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 英语学习实践篇:如何有效学习一门外语
+title: 实践:如何有效学习一门外语
 category: 学习
 tags: 方法论系列
 keywords: 英语,路线
