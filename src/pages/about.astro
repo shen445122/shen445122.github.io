@@ -1,0 +1,65 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import SectionIntro from '@/components/SectionIntro.astro';
+
+const principles = [
+  {
+    title: 'Write to understand',
+    body: 'The goal is not constant publication. It is to turn passing impressions into principles worth keeping.'
+  },
+  {
+    title: 'Prefer durable methods',
+    body: 'Learning, work, and self-direction become more useful when they are shaped into repeatable practices.'
+  },
+  {
+    title: 'Keep the interface quiet',
+    body: 'A personal archive should help words breathe, not compete with them.'
+  }
+];
+
+const sections = [
+  {
+    heading: 'What this site is for',
+    text: '雨沐苍树 is a personal writing archive built around study, work, life, and the slower craft of becoming more deliberate. Some pieces read like essays, some like field notes, some like shelves of influence. What binds them together is the attempt to keep only what remains useful after the first moment of excitement has passed.'
+  },
+  {
+    heading: 'What kind of person is writing here',
+    text: 'The sensibility behind the site is technical, but not narrowly technical. It values method over noise, reflection over immediacy, and systems that make a life more livable rather than merely more productive. The writing is interested in attention, learning, personal discipline, and the small structures that make long-term growth possible.'
+  },
+  {
+    heading: 'How the archive should grow',
+    text: 'New work should be easy to add and pleasant to maintain. That is why the site is being rebuilt around structured content, clearer page types, and a calmer editorial system: not just to look better, but to make future writing easier to keep alive.'
+  }
+];
+---
+
+<SiteLayout title="About" description="About 雨沐苍树, its concerns, and the person writing here.">
+  <section class="container-shell py-16 sm:py-20">
+    <SectionIntro
+      eyebrow="About"
+      title="A personal archive for durable ideas, careful study, and the quieter architecture of a thoughtful life"
+      intro="雨沐苍树 is built as a place to return to: not a feed to keep up with, but an archive of essays, notes, and influences that become more useful when revisited slowly."
+    />
+
+    <div class="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(18rem,0.9fr)]">
+      <div class="space-y-6 rounded-[2rem] border border-line/80 bg-white/68 p-7 shadow-[0_14px_36px_rgba(15,23,42,0.04)] sm:p-8">
+        {sections.map((section) => (
+          <section class="border-b border-line/70 pb-6 last:border-b-0 last:pb-0">
+            <h2 class="font-serif text-2xl leading-tight text-ink">{section.heading}</h2>
+            <p class="mt-4 text-base leading-8 text-muted">{section.text}</p>
+          </section>
+        ))}
+      </div>
+
+      <aside class="space-y-5 rounded-[2rem] border border-line/80 bg-white/58 p-7 shadow-[0_12px_30px_rgba(15,23,42,0.04)] sm:p-8">
+        <p class="eyebrow">Working principles</p>
+        {principles.map((principle) => (
+          <div class="border-b border-line/70 pb-5 last:border-b-0 last:pb-0">
+            <h3 class="font-serif text-xl leading-tight text-ink">{principle.title}</h3>
+            <p class="mt-3 text-sm leading-7 text-muted">{principle.body}</p>
+          </div>
+        ))}
+      </aside>
+    </div>
+  </section>
+</SiteLayout>

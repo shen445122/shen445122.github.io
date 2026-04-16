@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  @apply bg-paper text-ink antialiased scroll-smooth;
+}
+
+body {
+  @apply m-0 min-h-screen bg-paper font-sans text-base leading-7 text-ink;
+  background-image:
+    radial-gradient(circle at top, rgba(217, 227, 245, 0.28), transparent 26%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  @apply text-accent decoration-accent/30 underline-offset-4 transition;
+}
+
+a:hover {
+  @apply decoration-accent;
+}
+
+::selection {
+  @apply bg-accent text-white;
+}
+
+.prose-shell {
+  @apply max-w-reading;
+}
+
+.article-flow {
+  @apply text-[1.03rem] leading-8;
+}
+
+.article-rhythm :where(p + p) {
+  @apply mt-7;
+}
+
+.article-rhythm :where(h2 + p, h3 + p) {
+  @apply mt-5;
+}
+
+.article-rhythm :where(ul, ol) {
+  @apply rounded-[1.4rem] bg-paper/75 px-6 py-4;
+}
+
+.article-rhythm :where(blockquote) {
+  @apply rounded-[1.35rem] border border-line/80 bg-paper/90 px-5 py-4 not-italic text-ink/75 shadow-none;
+}
+
+.article-rhythm :where(blockquote p:first-child) {
+  @apply mt-0;
+}
+
+.article-lede {
+  @apply text-balance text-ink/80;
+}
+
+.prose-shell :where(h1, h2, h3, h4) {
+  @apply font-serif text-ink;
+  scroll-margin-top: 6.5rem;
+}
+
+.prose-shell :where(h2) {
+  @apply mt-14 text-[1.9rem] leading-tight;
+}
+
+.prose-shell :where(h3) {
+  @apply mt-10 text-[1.35rem] leading-tight;
+}
+
+.prose-shell :where(h2 + p, h3 + p) {
+  @apply mt-4;
+}
+
+.prose-shell > :where(p:first-child) {
+  @apply text-[1.18rem] leading-9 text-ink/95;
+}
+
+.prose-shell :where(p, li, blockquote) {
+  @apply text-[1.05rem] leading-8 text-ink/90;
+}
+
+.prose-shell :where(p, ul, ol, blockquote, pre, img, table) {
+  @apply my-6;
+}
+
+.prose-shell :where(li + li) {
+  @apply mt-2;
+}
+
+.prose-shell :where(strong) {
+  @apply font-semibold text-ink;
+}
+
+.prose-shell :where(blockquote) {
+  @apply border-l-2 border-accent/30 pl-4 italic text-ink/70;
+}
+
+.prose-shell :where(ul, ol) {
+  @apply pl-6;
+}
+
+.prose-shell :where(hr) {
+  @apply my-10 border-line;
+}
+
+.prose-shell :where(code) {
+  @apply rounded bg-ink/5 px-1.5 py-0.5 text-sm;
+}
+
+.prose-shell :where(pre) {
+  @apply overflow-x-auto rounded-2xl bg-ink px-5 py-4 text-sm text-white shadow-[0_18px_40px_rgba(15,23,42,0.18)];
+}
+
+.prose-shell :where(pre code) {
+  @apply bg-transparent p-0 text-inherit;
+}
+
+.prose-shell :where(img) {
+  @apply rounded-2xl border border-line shadow-[0_12px_28px_rgba(15,23,42,0.08)];
+}
+
+.toc-link {
+  @apply block rounded-2xl px-3 py-2 text-sm leading-6 text-muted no-underline transition hover:bg-paper hover:text-ink;
+}
+
+.toc-link-subtle {
+  @apply pl-6 text-[0.95rem];
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.24em] text-muted;
+}
+
+.card {
+  @apply rounded-3xl border border-line bg-card shadow-[0_14px_40px_rgba(15,23,42,0.05)];
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-6xl px-6 sm:px-8;
+}

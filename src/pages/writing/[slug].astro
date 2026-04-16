@@ -1,0 +1,31 @@
+---
+import PostLayout from '@/layouts/PostLayout.astro';
+import { getAllPostEntries, getPostEntryBySlug, toPost } from '@/lib/posts';
+import type { HeadingLink } from '@/types';
+
+export async function getStaticPaths() {
+  const entries = await getAllPostEntries();
+
+  return entries.map((entry) => ({
+    params: { slug: entry.slug }
+  }));
+}
+
+const slug = Astro.params.slug;
+
+if (!slug) {
+  throw new Error('Missing post slug.');
+}
+
+const entry = await getPostEntryBySlug(slug);
+
+if (!entry) {
+  throw new Error(`Post not found for slug: ${slug}`);
+}
+
+const { Content, headings = [] } = await entry.render();
+const post = toPost(entry);
+const sectionHeadings = (headings as HeadingLink[]).filter((heading) => heading.depth >= 2 && heading.depth <= 3);
+---
+
+<PostLayout post={post} Content={Content} headings={sectionHeadings} />

@@ -1,0 +1,17 @@
+---
+interface Props {
+  items: string[];
+  size?: 'normal' | 'small';
+}
+
+const { items, size = 'normal' } = Astro.props;
+const chipClass = size === 'small' ? 'px-3 py-1 text-[0.72rem]' : 'px-3 py-1.5 text-sm';
+---
+
+{items.length > 0 && (
+  <div class="flex flex-wrap gap-2.5 text-muted">
+    {items.map((item) => (
+      <span class={`rounded-full border border-line bg-white/76 ${chipClass}`}>{item}</span>
+    ))}
+  </div>
+)}
