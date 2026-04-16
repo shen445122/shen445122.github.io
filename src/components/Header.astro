@@ -1,9 +1,11 @@
 ---
+import { siteCopy } from '@/i18n/site';
+
 const nav = [
-  { href: '/', label: 'Home' },
-  { href: '/writing', label: 'Writing' },
-  { href: '/archive', label: 'Archive' },
-  { href: '/about', label: 'About' }
+  { href: '/', label: siteCopy.nav.home },
+  { href: '/writing', label: siteCopy.nav.writing },
+  { href: '/archive', label: siteCopy.nav.archive },
+  { href: '/about', label: siteCopy.nav.about }
 ];
 ---
 
@@ -11,10 +13,10 @@ const nav = [
   <div class="container-shell flex items-center justify-between gap-6 py-4">
     <a href="/" class="no-underline">
       <div class="text-sm font-semibold uppercase tracking-[0.28em] text-accent">雨沐苍树</div>
-      <div class="text-xs text-muted">Ludwig’s essays on study, work, and a quieter life</div>
+      <div class="text-xs text-muted">{siteCopy.brand.subtitle}</div>
     </a>
 
-    <nav aria-label="Primary">
+    <nav aria-label={siteCopy.nav.primaryLabel}>
       <ul class="flex items-center gap-1 text-sm text-muted sm:gap-2">
         {nav.map((item) => (
           <li>

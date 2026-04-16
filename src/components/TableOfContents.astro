@@ -1,4 +1,5 @@
 ---
+import { siteCopy } from '@/i18n/site';
 import type { HeadingLink } from '@/types';
 
 interface Props {
@@ -6,7 +7,7 @@ interface Props {
   title?: string;
 }
 
-const { headings, title = 'On this page' } = Astro.props;
+const { headings, title = siteCopy.toc.title } = Astro.props;
 const items = headings.filter((heading) => heading.depth >= 2 && heading.depth <= 3);
 ---
 
@@ -14,7 +15,7 @@ const items = headings.filter((heading) => heading.depth >= 2 && heading.depth <
   <nav aria-label={title} class="space-y-4">
     <div>
       <p class="eyebrow">{title}</p>
-      <p class="mt-2 text-sm leading-6 text-muted">A lightweight section map for slower reading.</p>
+      <p class="mt-2 text-sm leading-6 text-muted">{siteCopy.toc.description}</p>
     </div>
 
     <ol class="space-y-1.5">

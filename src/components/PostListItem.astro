@@ -1,4 +1,5 @@
 ---
+import { siteCopy } from '@/i18n/site';
 import { formatPostDate, getPostTypeLabel } from '@/lib/posts';
 import type { Post } from '@/types';
 
@@ -9,8 +10,8 @@ interface Props {
 
 const { post, compact = false } = Astro.props;
 const href = `/writing/${post.slug}/`;
-const cta = post.isBookPost ? 'Open shelf →' : 'Read piece →';
-const meta = post.isBookPost ? `${post.books.length} ${post.books.length === 1 ? 'book' : 'books'}` : post.readingTime;
+const cta = post.isBookPost ? siteCopy.cards.openShelf : siteCopy.cards.readPiece;
+const meta = post.isBookPost ? siteCopy.post.bookCount(post.books.length) : post.readingTime;
 const label = getPostTypeLabel(post.postType);
 ---
 

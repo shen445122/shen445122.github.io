@@ -30,6 +30,20 @@ npm run build
 npm run new:post -- --type essay "Your Post Title"
 ```
 
+## Site language
+
+The site now reads `PUBLIC_SITE_LANG` at build time.
+
+- default: `zh-CN`
+- optional: `en`
+
+Examples:
+
+```bash
+PUBLIC_SITE_LANG=zh-CN npm run dev
+PUBLIC_SITE_LANG=en npm run build
+```
+
 ## Authoring workflow
 
 ### For new posts

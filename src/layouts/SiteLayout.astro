@@ -1,6 +1,7 @@
 ---
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import { siteCopy } from '@/i18n/site';
 import '@/styles/global.css';
 
 interface Props {
@@ -8,14 +9,11 @@ interface Props {
   description?: string;
 }
 
-const {
-  title,
-  description = 'Warm editorial notes on study, work, life, and the quiet practice of becoming.'
-} = Astro.props;
+const { title, description = siteCopy.meta.defaultDescription } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={siteCopy.meta.lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

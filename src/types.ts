@@ -9,6 +9,7 @@ export type HeadingLink = {
 };
 
 export type PostType = 'essay' | 'note' | 'reading-list';
+export type SiteLanguage = 'zh-CN' | 'en';
 
 export type BookEntry = {
   title: string;

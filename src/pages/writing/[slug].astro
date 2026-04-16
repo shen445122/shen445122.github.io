@@ -1,4 +1,5 @@
 ---
+import { siteCopy } from '@/i18n/site';
 import PostLayout from '@/layouts/PostLayout.astro';
 import { getAllPostEntries, getPostEntryBySlug, toPost } from '@/lib/posts';
 import type { HeadingLink } from '@/types';
@@ -14,13 +15,13 @@ export async function getStaticPaths() {
 const slug = Astro.params.slug;
 
 if (!slug) {
-  throw new Error('Missing post slug.');
+  throw new Error(siteCopy.errors.missingPostSlug);
 }
 
 const entry = await getPostEntryBySlug(slug);
 
 if (!entry) {
-  throw new Error(`Post not found for slug: ${slug}`);
+  throw new Error(siteCopy.errors.postNotFound(slug));
 }
 
 const { Content, headings = [] } = await entry.render();

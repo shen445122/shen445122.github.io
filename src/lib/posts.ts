@@ -1,21 +1,22 @@
 import { getCollection } from 'astro:content';
+import { siteCopy } from '@/i18n/site';
 import type { FeaturedPost, BookEntry, Post, PostEntry, PostType } from '@/types';
 
 const FEATURED_CURATIONS = [
   {
     slug: 'methodology-of-study',
-    label: 'Start with method',
-    note: 'A clear entry into Ludwig’s long-running concern with how serious study becomes repeatable practice.'
+    label: siteCopy.featured.methodLabel,
+    note: siteCopy.featured.methodNote
   },
   {
     slug: 'the-minimalism',
-    label: 'On living with restraint',
-    note: 'A quieter piece about subtraction, attention, and the kind of life architecture this archive keeps returning to.'
+    label: siteCopy.featured.restraintLabel,
+    note: siteCopy.featured.restraintNote
   },
   {
     slug: 'work-in-company',
-    label: 'Work, systems, and stance',
-    note: 'Useful when you want the more technical, work-shaped side of the notebook rather than a purely reflective essay.'
+    label: siteCopy.featured.workLabel,
+    note: siteCopy.featured.workNote
   }
 ] as const;
 
@@ -45,7 +46,7 @@ function extractExcerpt(content: string, description?: string) {
 function readingTime(text: string) {
   const count = textLength(text);
   const minutes = Math.max(1, Math.round(count / 320));
-  return `${minutes} min read`;
+  return siteCopy.post.readingTime(minutes);
 }
 
 function inferPostType(entry: PostEntry, books: BookEntry[], body: string): PostType {
@@ -59,22 +60,22 @@ function inferPostType(entry: PostEntry, books: BookEntry[], body: string): Post
 export function getPostTypeLabel(type: PostType) {
   switch (type) {
     case 'reading-list':
-      return 'Reading list';
+      return siteCopy.labels.readingList;
     case 'note':
-      return 'Note';
+      return siteCopy.labels.note;
     default:
-      return 'Essay';
+      return siteCopy.labels.essay;
   }
 }
 
 export function getPostTypeDescription(type: PostType) {
   switch (type) {
     case 'reading-list':
-      return 'Books, references, and short remarks gathered into a shelf-like page.';
+      return siteCopy.post.typeDescription.readingList;
     case 'note':
-      return 'A shorter entry, usually compact enough to read in one sitting and return to later.';
+      return siteCopy.post.typeDescription.note;
     default:
-      return 'A longer piece meant to unfold patiently, with room for structure, examples, and reflection.';
+      return siteCopy.post.typeDescription.essay;
   }
 }
 
@@ -111,7 +112,7 @@ export function toPost(entry: PostEntry): Post {
     title: entry.data.title,
     description: entry.data.description?.trim() ?? '',
     postType,
-    category: entry.data.category?.trim() ?? 'Writing',
+    category: entry.data.category?.trim() ?? siteCopy.nav.writing,
     tags: entry.data.tags ?? [],
     date: entry.data.date,
     year: entry.data.year,
@@ -168,7 +169,7 @@ export async function getPostEntryBySlug(slug: string) {
 }
 
 export function formatPostDate(date: Date) {
-  return new Intl.DateTimeFormat('zh-CN', {
+  return new Intl.DateTimeFormat(siteCopy.meta.lang, {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
