@@ -1,0 +1,35 @@
+---
+import PostListItem from '@/components/PostListItem.astro';
+import { getPostTypeLabel } from '@/lib/posts';
+import type { Post, PostType } from '@/types';
+
+interface Props {
+  type: PostType;
+  title: string;
+  intro: string;
+  posts: Post[];
+}
+
+const { type, title, intro, posts } = Astro.props;
+const totalChars = posts.reduce((sum, post) => sum + post.textLength, 0);
+const approxLength = `${Math.max(1, Math.round(totalChars / 900))} reading sessions`;
+const label = getPostTypeLabel(type);
+---
+
+<section class="card bg-white/62 p-6 sm:p-8">
+  <div class="flex flex-col gap-4 border-b border-line/80 pb-5 sm:flex-row sm:items-end sm:justify-between">
+    <div class="max-w-2xl">
+      <p class="eyebrow">{label}</p>
+      <h2 class="mt-3 font-serif text-3xl leading-tight text-ink">{title}</h2>
+      <p class="mt-3 text-sm leading-7 text-muted">{intro}</p>
+    </div>
+    <div class="grid gap-3 text-sm text-muted sm:text-right">
+      <span>{posts.length} pieces</span>
+      <span>{approxLength}</span>
+    </div>
+  </div>
+
+  <div class="mt-3">
+    {posts.map((post) => <PostListItem post={post} compact />)}
+  </div>
+</section>

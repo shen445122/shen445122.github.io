@@ -1,0 +1,91 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import EditorialPanel from '@/components/EditorialPanel.astro';
+import MetadataChips from '@/components/MetadataChips.astro';
+import PostListItem from '@/components/PostListItem.astro';
+import { groupPostsByType, getAllPosts } from '@/lib/posts';
+
+const posts = await getAllPosts();
+const groupedByType = groupPostsByType(posts);
+const grouped = Object.entries(
+  posts.reduce<Record<string, typeof posts>>((acc, post) => {
+    acc[post.year] ??= [];
+    acc[post.year].push(post);
+    return acc;
+  }, {})
+).sort((a, b) => Number(b[0]) - Number(a[0]));
+
+const yearAnchors = grouped.map(([year]) => ({ year, href: `#year-${year}` }));
+const stats = [
+  `${grouped.length} years`,
+  `${posts.length} total pieces`,
+  `${groupedByType.essay.length} essays`,
+  `${groupedByType.note.length} notes`,
+  `${groupedByType['reading-list'].length} reading lists`
+];
+---
+
+<SiteLayout title="Archive" description="Year-by-year archive of Ludwig Shen’s essays, notes, and reading lists.">
+  <section class="container-shell py-16 sm:py-20">
+    <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_19rem] lg:items-start">
+      <div>
+        <p class="eyebrow">Archive</p>
+        <h1 class="mt-4 max-w-4xl font-serif text-4xl leading-tight text-ink sm:text-5xl lg:text-6xl">
+          A year-by-year view of what stayed worth keeping.
+        </h1>
+        <p class="mt-6 max-w-3xl text-lg leading-8 text-muted sm:text-xl">
+          Instead of flattening everything into one stream, the archive lets you see when concerns emerged, clustered, and deepened.
+        </p>
+        <div class="mt-8">
+          <MetadataChips items={stats} />
+        </div>
+      </div>
+
+      <EditorialPanel
+        eyebrow="Use this page"
+        title="Scan the years, then enter a cluster"
+        body="Each year card collects the pieces written in that period, along with a quick sense of what kinds of writing dominate it."
+      >
+        <div class="flex flex-wrap gap-2">
+          {yearAnchors.map((item) => (
+            <a href={item.href} class="rounded-full border border-line bg-white/80 px-3 py-1.5 text-sm font-medium text-ink no-underline hover:bg-paper">
+              {item.year}
+            </a>
+          ))}
+        </div>
+      </EditorialPanel>
+    </div>
+  </section>
+
+  <section class="container-shell pb-20">
+    <div class="space-y-8">
+      {grouped.map(([year, yearPosts]) => {
+        const typeCounts = [`${yearPosts.filter((post) => post.postType === 'essay').length} essays`, `${yearPosts.filter((post) => post.postType === 'note').length} notes`, `${yearPosts.filter((post) => post.postType === 'reading-list').length} reading lists`].filter(
+          (item) => !item.startsWith('0 ')
+        );
+        const categories = Array.from(new Set(yearPosts.map((post) => post.category)));
+
+        return (
+          <section id={`year-${year}`} class="card bg-white/62 p-6 sm:p-8">
+            <div class="flex flex-col gap-4 border-b border-line/80 pb-5 lg:flex-row lg:items-end lg:justify-between">
+              <div class="max-w-3xl">
+                <p class="eyebrow">Archive year</p>
+                <h2 class="mt-3 font-serif text-3xl text-ink sm:text-[2.3rem]">{year}</h2>
+                <p class="mt-3 text-sm leading-7 text-muted">
+                  {yearPosts.length} entries preserved from this year, across {categories.join(' · ')}.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-2 text-sm text-muted lg:justify-end">
+                <MetadataChips items={typeCounts} size="small" />
+              </div>
+            </div>
+
+            <div class="mt-3">
+              {yearPosts.map((post) => <PostListItem post={post} compact />)}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  </section>
+</SiteLayout>

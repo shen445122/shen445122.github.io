@@ -1,0 +1,118 @@
+---
+title: 2016年阅读书单
+description: ''
+category: 读书
+tags: []
+keywords:
+  - 阅读
+  - 书单
+  - '2016'
+version: '0.5'
+legacyLayout: book
+legacyPath: _posts/book/2016-01-01-2016-Book-List.md
+slug: 2016-Book-List
+year: '2016'
+date: '2016-01-01T00:00:00.000Z'
+books:
+  - title: 新生：七年就是一辈子
+    status: 已读
+    author: 李笑来
+    publisher: 网络电子书
+    language: 中文
+    link: 'http://zhibimo.com/books/xiaolai/reborn-every-7-years'
+    cover: /public/img/newlife.jpg
+    description: 李笑来老师写得有一本对于青年人很有指导意义的一本书，这本书的核心就是把人得大脑比作计算机的操作系统并教授你如何升级自己的操作系统
+    review: 每一个章节都用很口语化的方式跟你讲述一些生活中习以为常但是却又可能错的离谱的概念，书中还提到作者自己的各种生活的方法论。
+  - title: 经济学通识
+    status: 已读
+    author: 薛兆丰
+    publisher: 同心出版社
+    language: 中文
+    link: 'https://book.douban.com/subject/3869949/'
+    cover: 'https://img3.doubanio.com/lpic/s3913763.jpg'
+    description: >-
+      这是一本关于经济学的普及读物，薛老师通过生活周边普遍存在的生活问题来举例，从经济学的角度逐个分析了当今社会上得各种现象，可以说让人耳目一新，这本书中说举的例子虽然大部分很老，都是上个世纪90年代到这个世纪初的，但是并不妨碍其呈现一个个清晰的经济学概念于我们眼前。
+    review: >-
+      普及經濟學常識的好讀物，同時也耐讀，對於許多人來說確實可以稱作“洗腦經濟學”，呵呵！欣賞薜某在寫文章時堅持一貫的邏輯和觀點，經濟學那幾個最基本的原理，一旦掌握了，思維方式改變了，這個變化確實是終生的。
+  - title: 把时间当作朋友
+    status: 已读
+    author: 李笑来
+    publisher: 电子工业出版社
+    language: 中文
+    link: 'https://book.douban.com/subject/3609132/'
+    cover: 'https://img3.doubanio.com/lpic/s3778613.jpg'
+    description: >-
+      这本书从心智成长的角度来谈时间管理，指出时间管理是成功的关键所在。作者引述自己从事的职业中所遇到的事例，告诉我们：如何打开心智，如何运用心智来和时间做朋友，如何理解时间管理的意义，在时间管理上取得突破，进而用心智开启自己的人生成功之旅。
+  - title: 这才是心理学-看穿伪心理学的本质(第10版)
+    status: 在读
+    author: '基思·斯坦诺维奇,译者.'
+    publisher: 中国人民大学出版社
+    language: 中文
+    link: 'https://book.douban.com/subject/26686251/'
+    cover: 'https://img3.doubanio.com/lpic/s28362473.jpg'
+    description: 目前我们自身对于心理学的认识还只是伪科学信念系统的产物，借助本书的科学观念，我们可以去伪存真，更好地理解人类行为的本质，弄清什么才是真正的心理学。
+  - title: 暗时间
+    status: 在读
+    author: 刘未鹏
+    publisher: 电子工业出版社
+    language: 中文
+    link: 'https://book.douban.com/subject/6709809/'
+    cover: 'https://img3.doubanio.com/lpic/s6586365.jpg'
+    description: 这本书便是从刘未鹏8年的博客文章中精选出来的，主要关于心智模式、学习方法和时间利用，《暗时间》的书名便来自于此。
+  - title: 把你的英语用起来
+    status: 在读
+    author: 伍君仪 / 刘晓光
+    publisher: 外文出版社
+    language: 中文
+    link: 'https://book.douban.com/subject/3748247/'
+    cover: 'https://img3.doubanio.com/lpic/s26696783.jpg'
+    description: 这本书学习方法的理论基础是来自美国南加州大学的教授Dr Krashen的二语习得理论。
+  - title: 货币战争
+    status: 已读
+    author: 宋鸿兵
+    publisher: 中信出版社
+    language: 中文
+    link: 'https://book.douban.com/subject/6827453/'
+    cover: 'https://img1.doubanio.com/lpic/s8847239.jpg'
+    description: >-
+      在全球经济发展的过程中，货币起到了举足轻重的作用。通胀、通缩和泡沫越来越频繁地影响到我们的生活，但是货币背后隐藏的集团利益之争，却在很长时间里不为人知。
+    review: >-
+      这本书不同知识背景的人读起来会有不同的感受，可能有人认为是阴谋论，有的人认为是增强自己的金融知识，但是最重要的一点我认为是让你的眼界更加开阔，了解游戏规则的人总比被游戏规则揉虐的人感受到幸福。
+  - title: 囚徒健身
+    status: 已读
+    author: 保罗·威德
+    publisher: 北京科学技术出版社
+    language: 中文
+    link: 'https://book.douban.com/subject/25717097/'
+    cover: 'https://img3.doubanio.com/lpic/s27248971.jpg'
+    description: 这不是一本教你练出“可爱肌肉”的书，而是一本教你练出能用的力量、极限的力量、生存的力量的书。
+    review: 书的整体感觉清晰，图文并茂，详细介绍无器械健身的方法，总结了其中的六艺十式，作为自己的日常锻炼基础指标。
+  - title: 批判性思维
+    status: 在读
+    author: '布鲁克.诺埃尔.摩尔,理查德.帕克,译者.朱素梅'
+    publisher: 机械工业出版社
+    language: 中文
+    link: 'https://book.douban.com/subject/7057936/'
+    cover: 'https://img3.doubanio.com/lpic/s8921593.jpg'
+    description: >-
+      从批判性思维的重要性和必要性说起，就如何进行正确地思维和清晰地写作，到有效论证的规则、合理的演绎和归纳推理，再到道德、法律和美学的论证进行了详细阐述，同时还指出了各种以修辞手法来掩盖虚假论证的例子，对批判性思维进行了全面的论述，
+  - title: 学会提问
+    status: 在读
+    author: 'M.尼尔•布朗,斯图尔特•基利,译者.吴礼敬'
+    publisher: 机械工业出版社
+    language: 中文
+    link: 'https://book.douban.com/subject/20428922/'
+    cover: 'https://img1.doubanio.com/lpic/s24939868.jpg'
+    description: >-
+      在一个被泛滥信息包围的时代，每时每刻都会遇到各种问题，大到涉及世界经济发展趋势，小到个人生活的决策。面对别人兜售的观点——他们热衷于让你相信这是“事实”，你明明觉得有什么不对劲，可一时又很难找到突破口反驳，你有能力提出关键问题，让众说纷纭的争论立见分晓，让道貌岸然的说谎者原形毕露吗？
+  - title: 别做正常的傻瓜
+    status: 已读
+    author: 奚恺元
+    publisher: 机械工业出版社
+    language: 中文
+    link: 'https://book.douban.com/subject/1874488/'
+    cover: 'https://img3.doubanio.com/lpic/s11332434.jpg'
+    description: 基于获得诺贝尔奖的行为决策学，又基于作者10余年的管理教学经验，帮你揭示人们在工作和生活中熟视无睹的决策误区，并教你如何纠正。
+    review: 这本书通过列举很多例子结合一些科学调查数据，分析了我们生活中的许许多多欠理性的决策，并不时给出一些理性决策者的建议，值得一看。
+---
+

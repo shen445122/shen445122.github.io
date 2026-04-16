@@ -1,0 +1,26 @@
+{
+  "name": "shen445122.github.io",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync:content": "node scripts/sync-content.mjs",
+    "new:post": "node scripts/new-post.mjs",
+    "dev": "npm run sync:content && astro dev",
+    "start": "npm run sync:content && astro dev",
+    "build": "npm run sync:content && astro build",
+    "preview": "astro preview",
+    "check": "npm run sync:content && astro check"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.6.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.13.2",
+    "fast-glob": "^3.3.3",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.9.2"
+  }
+}

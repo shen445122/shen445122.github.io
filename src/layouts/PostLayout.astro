@@ -1,0 +1,134 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import BookShelf from '@/components/BookShelf.astro';
+import EditorialPanel from '@/components/EditorialPanel.astro';
+import MetadataChips from '@/components/MetadataChips.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import { formatPostDate, getPostTypeDescription, getPostTypeLabel } from '@/lib/posts';
+import type { HeadingLink, Post } from '@/types';
+
+interface Props {
+  post: Post;
+  Content: any;
+  headings?: HeadingLink[];
+}
+
+const { post, Content, headings = [] } = Astro.props;
+const hasEssayBody = post.body.trim().length > 0;
+const hasSections = headings.length > 0;
+const typeLabel = getPostTypeLabel(post.postType);
+const typeDescription = getPostTypeDescription(post.postType);
+const metadata = [typeLabel, formatPostDate(post.date), post.readingTime, `${post.textLength} chars`];
+const archiveSummary = `${post.year} · ${post.category}`;
+const entryPrompt = post.postType === 'reading-list'
+  ? 'Open the shelf first, then move through the short remarks as annotations rather than a single linear essay.'
+  : post.postType === 'note'
+    ? 'A compact piece: best read in one pass, then returned to later when the problem reappears.'
+    : 'A longer-form piece: settle into the headings, let each section land, and take the links in the margin as quiet support.';
+const closingLinks = [
+  { href: '/writing', label: 'Return to the writing table' },
+  { href: '/archive', label: `Browse the ${post.year} archive` }
+];
+---
+
+<SiteLayout title={post.title} description={post.description || post.excerpt}>
+  <section class="container-shell py-16 sm:py-20">
+    <div class="mx-auto max-w-5xl border-b border-line/80 pb-10">
+      <a href="/writing" class="text-sm font-medium no-underline">← Back to writing</a>
+      <p class="eyebrow mt-8">{archiveSummary}</p>
+      <h1 class="mt-4 max-w-4xl font-serif text-4xl leading-tight text-ink sm:text-5xl lg:text-6xl">
+        {post.title}
+      </h1>
+      <p class="article-lede mt-6 max-w-3xl text-lg leading-8 text-muted sm:text-xl">
+        {post.description || post.excerpt}
+      </p>
+      <div class="mt-8 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+        <MetadataChips items={metadata} />
+        {post.tags.length > 0 && <MetadataChips items={post.tags.map((tag) => `#${tag}`)} size="small" />}
+      </div>
+    </div>
+  </section>
+
+  <section class="container-shell pb-20">
+    <div class="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[16rem_minmax(0,1fr)] xl:grid-cols-[17rem_minmax(0,44rem)]">
+      <aside class="space-y-6 text-sm text-muted lg:sticky lg:top-24 lg:self-start">
+        <EditorialPanel eyebrow="At a glance" title={typeLabel} body={typeDescription} padding="compact">
+          <dl class="space-y-4 text-sm leading-7 text-muted">
+            <div>
+              <dt class="eyebrow">Published</dt>
+              <dd class="mt-1">{formatPostDate(post.date)}</dd>
+            </div>
+            <div>
+              <dt class="eyebrow">Shape</dt>
+              <dd class="mt-1">{post.readingTime} · {post.textLength} chars</dd>
+            </div>
+            <div>
+              <dt class="eyebrow">Archive</dt>
+              <dd class="mt-1">{post.year}, filed under {post.category}.</dd>
+            </div>
+            {post.isBookPost && (
+              <div>
+                <dt class="eyebrow">Shelf</dt>
+                <dd class="mt-1">{post.books.length} books recorded in this list.</dd>
+              </div>
+            )}
+          </dl>
+        </EditorialPanel>
+
+        <EditorialPanel eyebrow="Reading note" body={entryPrompt} padding="compact" />
+
+        {hasSections && (
+          <EditorialPanel eyebrow="Section map" padding="compact">
+            <TableOfContents headings={headings} />
+          </EditorialPanel>
+        )}
+      </aside>
+
+      <div class="space-y-8">
+        <EditorialPanel
+          eyebrow="Editorial preface"
+          title="A quieter reading frame"
+          body="The page is intentionally paced like a print essay: metadata up front, margin notes kept small, and the prose column left to do most of the work."
+        >
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-[1.4rem] border border-line/70 bg-paper/75 px-4 py-4">
+              <p class="eyebrow">This piece is doing</p>
+              <p class="mt-2 text-sm leading-7 text-muted">{typeDescription}</p>
+            </div>
+            <div class="rounded-[1.4rem] border border-line/70 bg-paper/75 px-4 py-4">
+              <p class="eyebrow">Best way in</p>
+              <p class="mt-2 text-sm leading-7 text-muted">{entryPrompt}</p>
+            </div>
+          </div>
+        </EditorialPanel>
+
+        {post.isBookPost ? <BookShelf books={post.books} title={post.title} /> : null}
+
+        {hasEssayBody ? (
+          <article class="card bg-white/74 px-6 py-8 sm:px-10 sm:py-12">
+            <div class="mb-8 flex flex-col gap-3 border-b border-line/70 pb-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+              <span>
+                Kept in the archive as a {typeLabel.toLowerCase()}, meant to reward slower rereading rather than feed-style skimming.
+              </span>
+              {hasSections && <span class="text-ink/70">{headings.length} sections mapped</span>}
+            </div>
+            <div class="prose-shell article-flow article-rhythm">
+              <Content />
+            </div>
+          </article>
+        ) : null}
+
+        <EditorialPanel eyebrow="Continue browsing" title="Stay inside the archive" padding="normal">
+          <div class="flex flex-wrap gap-3 text-sm">
+            {closingLinks.map((item) => (
+              <a href={item.href} class="rounded-full border border-line bg-white/80 px-4 py-2 font-medium text-ink no-underline hover:bg-paper">
+                {item.label}
+              </a>
+            ))}
+          </div>
+          <p class="mt-4 text-sm leading-7 text-muted break-all">Source: {post.legacyPath}</p>
+        </EditorialPanel>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

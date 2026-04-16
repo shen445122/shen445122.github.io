@@ -1,0 +1,33 @@
+---
+import type { HeadingLink } from '@/types';
+
+interface Props {
+  headings: HeadingLink[];
+  title?: string;
+}
+
+const { headings, title = 'On this page' } = Astro.props;
+const items = headings.filter((heading) => heading.depth >= 2 && heading.depth <= 3);
+---
+
+{items.length > 0 && (
+  <nav aria-label={title} class="space-y-4">
+    <div>
+      <p class="eyebrow">{title}</p>
+      <p class="mt-2 text-sm leading-6 text-muted">A lightweight section map for slower reading.</p>
+    </div>
+
+    <ol class="space-y-1.5">
+      {items.map((heading) => (
+        <li>
+          <a
+            href={`#${heading.slug}`}
+            class={`toc-link ${heading.depth === 3 ? 'toc-link-subtle' : ''}`}
+          >
+            {heading.text}
+          </a>
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}
