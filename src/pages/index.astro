@@ -12,11 +12,11 @@ const [lead, ...supporting] = featured;
 ---
 
 <SiteLayout title={siteCopy.home.title} description={siteCopy.home.description}>
-  <section class="container-shell py-16 sm:py-24">
-    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-end">
+  <section class="container-shell pt-8 pb-16 sm:pt-10 sm:pb-20">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
       <div>
         <p class="eyebrow">{siteCopy.home.eyebrow}</p>
-        <h1 class="mt-5 max-w-4xl font-serif text-5xl leading-[1.04] text-ink sm:text-6xl lg:text-7xl">
+        <h1 class="mt-5 max-w-4xl font-serif text-3xl leading-[1.12] text-ink sm:text-4xl lg:text-5xl">
           {siteCopy.home.heading}
         </h1>
         <p class="mt-6 max-w-3xl text-lg leading-8 text-muted sm:text-xl">{siteCopy.home.intro}</p>
