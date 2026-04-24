@@ -25,41 +25,41 @@ function getHostname(url: string) {
 ---
 
 <SiteLayout title={siteCopy.sitesPage.title} description={siteCopy.sitesPage.description}>
-  <section id="top" class="container-shell py-16 sm:py-24">
-    <div class="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_24rem] lg:items-start">
+  <section id="top" class="container-shell py-12 sm:py-16">
+    <div class="grid gap-7 lg:grid-cols-[minmax(0,1.16fr)_22rem] lg:items-start">
       <div>
         <p class="eyebrow">{siteCopy.sitesPage.eyebrow}</p>
-        <h1 class="mt-5 max-w-5xl font-serif text-5xl leading-[1.03] text-ink sm:text-6xl lg:text-7xl">
+        <h1 class="mt-4 max-w-5xl font-serif text-4xl leading-[1.04] text-ink sm:text-5xl lg:text-6xl">
           {siteCopy.sitesPage.heading}
         </h1>
-        <p class="mt-6 max-w-3xl text-lg leading-8 text-muted sm:text-xl">{siteCopy.sitesPage.intro}</p>
+        <p class="mt-4 max-w-3xl text-base leading-7 text-muted sm:text-lg">{siteCopy.sitesPage.intro}</p>
 
-        <div class="mt-10 grid gap-4 sm:grid-cols-3">
-          <div class="rounded-[1.8rem] border border-line/80 bg-white/78 p-5 shadow-[0_12px_30px_rgba(15,23,42,0.04)]">
+        <div class="mt-7 grid gap-3 sm:grid-cols-3">
+          <div class="rounded-[1.4rem] border border-line/80 bg-white/78 px-4 py-4 shadow-[0_10px_24px_rgba(15,23,42,0.04)]">
             <p class="eyebrow">{siteCopy.sitesPage.stats.sections}</p>
-            <p class="mt-3 font-serif text-4xl text-ink">{directoryStats.sectionCount}</p>
+            <p class="mt-2 font-serif text-3xl leading-none text-ink">{directoryStats.sectionCount}</p>
           </div>
-          <div class="rounded-[1.8rem] border border-line/80 bg-white/78 p-5 shadow-[0_12px_30px_rgba(15,23,42,0.04)]">
+          <div class="rounded-[1.4rem] border border-line/80 bg-white/78 px-4 py-4 shadow-[0_10px_24px_rgba(15,23,42,0.04)]">
             <p class="eyebrow">{siteCopy.sitesPage.stats.sites}</p>
-            <p class="mt-3 font-serif text-4xl text-ink">{directoryStats.siteCount}</p>
+            <p class="mt-2 font-serif text-3xl leading-none text-ink">{directoryStats.siteCount}</p>
           </div>
-          <div class="rounded-[1.8rem] border border-line/80 bg-white/78 p-5 shadow-[0_12px_30px_rgba(15,23,42,0.04)]">
+          <div class="rounded-[1.4rem] border border-line/80 bg-white/78 px-4 py-4 shadow-[0_10px_24px_rgba(15,23,42,0.04)]">
             <p class="eyebrow">{siteCopy.sitesPage.stats.memo}</p>
-            <p class="mt-3 font-serif text-2xl leading-tight text-ink">【站点库】网址合集</p>
+            <p class="mt-2 font-serif text-xl leading-tight text-ink">【站点库】网址合集</p>
           </div>
         </div>
       </div>
 
-      <div class="space-y-5">
-        <EditorialPanel eyebrow={siteCopy.sitesPage.noteTitle} title="为重复使用而整理" body={siteCopy.sitesPage.noteBody}>
-          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-            <div class="rounded-[1.35rem] border border-line/70 bg-paper/80 px-4 py-4">
+      <div class="space-y-4">
+        <EditorialPanel eyebrow={siteCopy.sitesPage.noteTitle} title="为重复使用而整理" body={siteCopy.sitesPage.noteBody} padding="compact">
+          <div class="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-1">
+            <div class="rounded-[1.15rem] border border-line/70 bg-paper/80 px-4 py-3.5">
               <p class="eyebrow">{siteCopy.sitesPage.jumpTitle}</p>
-              <p class="mt-2 text-sm leading-7 text-muted">{directorySections.length} 个分区，覆盖论文、AI、数据、云盘、Mac、PDF 与资源站。</p>
+              <p class="mt-1.5 text-sm leading-6 text-muted">{directorySections.length} 个分区，覆盖论文、AI、数据、云盘、Mac、PDF 与资源站。</p>
             </div>
-            <div class="rounded-[1.35rem] border border-line/70 bg-paper/80 px-4 py-4">
+            <div class="rounded-[1.15rem] border border-line/70 bg-paper/80 px-4 py-3.5">
               <p class="eyebrow">{siteCopy.sitesPage.sourceTitle}</p>
-              <p class="mt-2 text-sm leading-7 text-muted">{siteCopy.sitesPage.sourceBody}</p>
+              <p class="mt-1.5 text-sm leading-6 text-muted">{siteCopy.sitesPage.sourceBody}</p>
             </div>
           </div>
         </EditorialPanel>
@@ -67,9 +67,9 @@ function getHostname(url: string) {
     </div>
   </section>
 
-  <section class="container-shell pb-10">
-    <div class="rounded-[2rem] border border-line/80 bg-white/74 p-5 shadow-[0_16px_40px_rgba(15,23,42,0.05)] sm:p-7">
-      <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+  <section class="container-shell pb-8">
+    <div class="rounded-[1.65rem] border border-line/80 bg-white/74 p-4 shadow-[0_14px_32px_rgba(15,23,42,0.05)] sm:p-5">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <SectionIntro
           eyebrow={siteCopy.sitesPage.jumpTitle}
           title="按主题进入这份站点库"
@@ -77,7 +77,7 @@ function getHostname(url: string) {
         />
         <div class="flex flex-wrap gap-2">
           {directorySections.map((section) => (
-            <a href={`#${section.id}`} class="rounded-full border border-line bg-paper/70 px-4 py-2 text-sm font-medium text-ink no-underline hover:bg-white">
+            <a href={`#${section.id}`} class="rounded-full border border-line bg-paper/70 px-3 py-1.5 text-xs font-medium text-ink no-underline hover:bg-white sm:text-sm">
               {section.title}
             </a>
           ))}
@@ -86,63 +86,63 @@ function getHostname(url: string) {
     </div>
   </section>
 
-  <section class="container-shell pb-24">
-    <div class="grid gap-8">
+  <section class="container-shell pb-16">
+    <div class="grid gap-6">
       {directorySections.map((section, index) => {
         const pair = accentPairs[index % accentPairs.length];
 
         return (
           <section id={section.id} class="card overflow-hidden bg-white/68">
-            <div class={`border-b border-line/70 bg-gradient-to-r ${pair[0]} ${pair[1]} px-6 py-8 sm:px-8`}>
-              <div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+            <div class={`border-b border-line/70 bg-gradient-to-r ${pair[0]} ${pair[1]} px-5 py-5 sm:px-6`}>
+              <div class="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
                 <div class="max-w-3xl">
                   <p class="eyebrow">{section.sourceGroup} · {section.sourceSection}</p>
-                  <h2 class="mt-3 font-serif text-3xl leading-tight text-ink sm:text-[2.4rem]">{section.title}</h2>
-                  <p class="mt-4 max-w-2xl text-base leading-7 text-muted">{section.intro}</p>
+                  <h2 class="mt-2 font-serif text-[1.9rem] leading-tight text-ink sm:text-[2.15rem]">{section.title}</h2>
+                  <p class="mt-2 max-w-2xl text-sm leading-6 text-muted sm:text-[0.98rem]">{section.intro}</p>
                 </div>
 
-                <div class="grid gap-3 text-sm text-muted sm:text-right">
+                <div class="grid gap-1.5 text-sm text-muted sm:text-right">
                   <span>{siteCopy.sitesPage.meta.siteCount(section.sites.length)}</span>
                   <a href="#top" class="font-medium no-underline">{siteCopy.sitesPage.actions.jumpToSection}</a>
                 </div>
               </div>
             </div>
 
-            <div class="grid gap-5 p-6 sm:grid-cols-2 sm:p-8 xl:grid-cols-3">
+            <div class="grid gap-4 p-4 sm:grid-cols-2 sm:p-5 xl:grid-cols-3">
               {section.sites.map((site) => (
-                <article class="group flex h-full flex-col rounded-[1.7rem] border border-line/80 bg-white/92 p-5 shadow-[0_14px_34px_rgba(15,23,42,0.04)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(15,23,42,0.08)]">
-                  <div class="flex items-start justify-between gap-4">
+                <article class="group flex h-full flex-col rounded-[1.35rem] border border-line/80 bg-white/92 p-4 shadow-[0_10px_24px_rgba(15,23,42,0.04)] transition hover:-translate-y-0.5 hover:shadow-[0_14px_32px_rgba(15,23,42,0.08)]">
+                  <div class="flex items-start justify-between gap-3">
                     <div>
-                      <p class="text-xs font-semibold uppercase tracking-[0.22em] text-muted">{getHostname(site.url)}</p>
-                      <h3 class="mt-3 font-serif text-[1.55rem] leading-tight text-ink">
+                      <p class="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-muted">{getHostname(site.url)}</p>
+                      <h3 class="mt-2 font-serif text-[1.28rem] leading-tight text-ink sm:text-[1.38rem]">
                         <a href={site.url} target="_blank" rel="noreferrer" class="no-underline hover:text-accent">{site.title}</a>
                       </h3>
                     </div>
                     {site.note && (
-                      <span class="rounded-full border border-accent/20 bg-accent/8 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-accent">
+                      <span class="rounded-full border border-accent/20 bg-accent/8 px-2.5 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-accent">
                         {siteCopy.sitesPage.badges.newlyAdded}
                       </span>
                     )}
                   </div>
 
-                  <p class="mt-4 flex-1 text-sm leading-7 text-muted">
+                  <p class="mt-3 flex-1 text-sm leading-6 text-muted">
                     {site.description || '来自备忘录整理，适合作为长期收藏与快速进入的站点入口。'}
                   </p>
 
-                  <div class="mt-5 flex flex-wrap gap-2">
+                  <div class="mt-3.5 flex flex-wrap gap-1.5">
                     {site.backups?.map((backup, backupIndex) => (
                       <a
                         href={backup}
                         target="_blank"
                         rel="noreferrer"
-                        class="rounded-full border border-line bg-paper/80 px-3 py-1.5 text-xs font-medium text-ink no-underline hover:bg-white"
+                        class="rounded-full border border-line bg-paper/80 px-2.5 py-1 text-[0.72rem] font-medium text-ink no-underline hover:bg-white"
                       >
                         {siteCopy.sitesPage.badges.backup} {backupIndex + 1}
                       </a>
                     ))}
                   </div>
 
-                  <div class="mt-6 flex items-center justify-between gap-4 border-t border-line/70 pt-4 text-sm">
+                  <div class="mt-4 flex items-center justify-between gap-3 border-t border-line/70 pt-3 text-[0.92rem]">
                     <span class="text-muted">
                       {site.backups?.length ? siteCopy.sitesPage.meta.backupCount(site.backups.length) : section.title}
                     </span>
@@ -158,17 +158,17 @@ function getHostname(url: string) {
       })}
     </div>
 
-    <div class="mt-10 rounded-[2rem] border border-line/80 bg-white/72 p-6 shadow-[0_16px_40px_rgba(15,23,42,0.05)] sm:p-8">
-      <div class="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(16rem,0.8fr)] lg:items-end">
+    <div class="mt-8 rounded-[1.65rem] border border-line/80 bg-white/72 p-5 shadow-[0_14px_34px_rgba(15,23,42,0.05)] sm:p-6">
+      <div class="grid gap-4 lg:grid-cols-[minmax(0,1.2fr)_minmax(14rem,0.8fr)] lg:items-end">
         <div>
           <p class="eyebrow">{siteCopy.sitesPage.sourceTitle}</p>
-          <h2 class="mt-3 font-serif text-3xl leading-tight text-ink">把收藏夹升级成可维护的站点资产</h2>
-          <p class="mt-4 max-w-3xl text-base leading-8 text-muted">
+          <h2 class="mt-2 font-serif text-[1.9rem] leading-tight text-ink">把收藏夹升级成可维护的站点资产</h2>
+          <p class="mt-3 max-w-3xl text-sm leading-7 text-muted sm:text-base">
             这一页把个人备忘录中的网址从“信息堆积”变成了“可浏览、可持续维护、可继续扩展”的站点库。
             后续只要继续往数据文件追加分区或站点，就可以稳定迭代这份导航页。
           </p>
         </div>
-        <div class="grid gap-3 text-sm text-muted sm:text-right">
+        <div class="grid gap-2 text-sm text-muted sm:text-right">
           <span>{directoryStats.sectionCount} {siteCopy.sitesPage.stats.sections}</span>
           <span>{directoryStats.siteCount} {siteCopy.sitesPage.stats.sites}</span>
           <span>{backupTotal} {siteCopy.sitesPage.badges.backup}</span>
