@@ -18,6 +18,7 @@ const uiByLanguage = {
     nav: {
       home: '首页',
       writing: '写作',
+      sites: '站点库',
       archive: '归档',
       about: '关于',
       primaryLabel: '主导航'
@@ -195,6 +196,36 @@ const uiByLanguage = {
         }
       ]
     },
+    sitesPage: {
+      title: '站点库',
+      description: '把备忘录里的高价值网址整理成可长期维护的专业导航页。',
+      eyebrow: '站点库',
+      heading: '一个经过整理的高质量网址导航页，服务学习、研究、工具与长期工作流。',
+      intro: '这不是随手堆链接的收藏夹，而是从备忘录《【站点库】网址合集》里提炼出来的站点库：按主题分区、强调可用性，也保留后续扩充的空间。',
+      noteTitle: '收录原则',
+      noteBody: '优先保留能直接提高效率、扩展信息入口，或适合作为长期工具底座的网站。页面风格刻意保持克制、专业与可浏览。',
+      jumpTitle: '快速跳转',
+      sourceTitle: '来源',
+      sourceBody: '内容整理自 Apple Notes 备忘录《【站点库】网址合集》，并把“需要新增”的网址一并纳入。',
+      stats: {
+        sections: '主题分区',
+        sites: '精选站点',
+        memo: '来源备忘录'
+      },
+      actions: {
+        visitSite: '打开网站 ↗',
+        viewBackup: '备用地址',
+        jumpToSection: '跳到分区 →'
+      },
+      badges: {
+        newlyAdded: '新增',
+        backup: '备用'
+      },
+      meta: {
+        siteCount: (count: number) => `${count} 个站点`,
+        backupCount: (count: number) => `${count} 个备用地址`
+      }
+    },
     postLayout: {
       backToWriting: '← 返回写作',
       atAGlance: '一眼概览',
@@ -246,6 +277,7 @@ const uiByLanguage = {
     nav: {
       home: 'Home',
       writing: 'Writing',
+      sites: 'Directory',
       archive: 'Archive',
       about: 'About',
       primaryLabel: 'Primary'
@@ -422,6 +454,36 @@ const uiByLanguage = {
           text: 'New work should be easy to add and pleasant to maintain. That is why the site is being rebuilt around structured content, clearer page types, and a calmer editorial system: not just to look better, but to make future writing easier to keep alive.'
         }
       ]
+    },
+    sitesPage: {
+      title: 'Directory',
+      description: 'A polished directory page distilled from the websites collected in the memo.',
+      eyebrow: 'Directory',
+      heading: 'A curated website directory for learning, research, tools, and long-term digital workflows.',
+      intro: 'This is not a loose bookmark dump. It turns the memo “【站点库】网址合集” into a structured directory page with categories, visual hierarchy, and room to grow.',
+      noteTitle: 'Curation rules',
+      noteBody: 'Priority goes to websites that extend capability, improve research access, or serve as durable infrastructure for recurring work. The interface stays restrained, clean, and professional.',
+      jumpTitle: 'Quick jump',
+      sourceTitle: 'Source',
+      sourceBody: 'Curated from the Apple Notes memo “【站点库】网址合集”, including the link marked as newly added.',
+      stats: {
+        sections: 'Sections',
+        sites: 'Selected sites',
+        memo: 'Source memo'
+      },
+      actions: {
+        visitSite: 'Open site ↗',
+        viewBackup: 'Backup link',
+        jumpToSection: 'Jump to section →'
+      },
+      badges: {
+        newlyAdded: 'New',
+        backup: 'Backup'
+      },
+      meta: {
+        siteCount: (count: number) => `${count} sites`,
+        backupCount: (count: number) => `${count} backup links`
+      }
     },
     postLayout: {
       backToWriting: '← Back to writing',
